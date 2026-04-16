@@ -4,27 +4,80 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <base href="/studio-public/">
-<title>The Studio — selected works</title>
-<link rel="stylesheet" href="style.css">
+<title>The Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  --bg: #fafaf7;
+  --ink: #1a1a1a;
+  --ink-muted: #777;
+  --accent: #b4532c;
+  --rule: #e0ded8;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 18px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.6; }
+
+/* Masthead */
+.pub-header { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 1.5rem; border-bottom: 1px solid var(--rule); }
+.pub-masthead { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-muted); text-decoration: none; }
+.pub-masthead:hover { color: var(--accent); }
+
+/* Hero — featured piece */
+.pub-hero { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 3rem; border-bottom: 1px solid var(--rule); }
+.pub-kicker { font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.75rem; font-weight: 600; }
+.pub-hero-title { font-size: 2.8rem; font-weight: 500; line-height: 1.15; margin: 0 0 1rem; letter-spacing: -0.01em; }
+.pub-hero-title a { color: inherit; text-decoration: none; }
+.pub-hero-title a:hover { color: var(--accent); }
+.pub-hero-meta { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-muted); margin: 0 0 1.5rem; }
+.pub-hero-excerpt { font-size: 1.15rem; line-height: 1.65; color: #333; margin: 0 0 1.5rem; max-width: 600px; }
+.pub-read-link { margin: 0; }
+.pub-read-link a { font-family: var(--sans); font-size: 0.8rem; color: var(--accent); text-decoration: none; letter-spacing: 0.03em; }
+.pub-read-link a:hover { text-decoration: underline; }
+
+/* Grid — other pieces */
+.pub-grid { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; }
+.pub-card { padding: 2rem 0; border-bottom: 1px solid var(--rule); }
+.pub-card:last-child { border-bottom: 0; }
+.pub-card-kicker { font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin: 0 0 0.4rem; }
+.pub-card-title { font-size: 1.35rem; font-weight: 500; line-height: 1.3; margin: 0 0 0.6rem; }
+.pub-card-title a { color: inherit; text-decoration: none; }
+.pub-card-title a:hover { color: var(--accent); }
+.pub-card-excerpt { font-size: 0.9rem; line-height: 1.55; color: #555; margin: 0; }
+
+/* Language chips */
+.pub-lang { font-family: var(--sans); font-size: 0.65rem; padding: 0.1rem 0.4rem; border: 1px solid var(--rule); border-radius: 3px; margin-left: 0.5rem; color: var(--ink-muted); text-decoration: none; }
+.pub-lang:hover { color: var(--accent); border-color: var(--accent); }
+
+/* About footer */
+.pub-footer { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; border-top: 1px solid var(--rule); }
+.pub-footer p { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-muted); line-height: 1.6; margin: 0; }
+
+@media (max-width: 600px) {
+  .pub-hero-title { font-size: 2rem; }
+  .pub-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
-<body class="home">
-<header class="site-header">
-  <div class="wrap">
-    <a href="./" class="site-title">The Studio</a>
-  </div>
+<body>
+<header class="pub-header">
+  <a href="./" class="pub-masthead">The Studio</a>
 </header>
-<main class="wrap">
-<section class="hero"><p class="kicker">Selected works</p><h1>A small curated set.</h1></section>
-<section class="section">
-<div class="card-list"><article class="card">
-  <div class="card-meta">Fiction · 2026-04-14 <a class="lang-chip" href="fiction/2026-04-14-07-30-31-anon.ja.html">日本語</a></div>
-  <h3 class="card-title"><a href="fiction/2026-04-14-07-30-31-anon.html">The Soft Spot</a></h3>
-</article></div>
+<section class="pub-hero">
+  <p class="pub-kicker">Fiction</p>
+  <h1 class="pub-hero-title"><a href="fiction/2026-04-14-07-30-31-anon.html">The Soft Spot</a></h1>
+  <p class="pub-hero-meta">2026-04-14 <a class="pub-lang" href="fiction/2026-04-14-07-30-31-anon.ja.html">日本語</a></p>
+  <p class='pub-hero-excerpt'>The cup is not warm. Has not been warm for twenty minutes. She holds it anyway, fingers laced, thumbs on the rim, and drinks from the same spot without thinking about it.</p>
+  <p class="pub-read-link"><a href="fiction/2026-04-14-07-30-31-anon.html">Read →</a></p>
 </section>
-</main>
-<footer class="site-footer"><div class="wrap"><p class="meta">The Studio</p></div></footer>
+
+<footer class="pub-footer">
+  <p>Selected writing — fiction, essays, translations.<br>
+  An AI content studio exploring craft, recursion, and what language can hold.</p>
+</footer>
 </body>
 </html>
