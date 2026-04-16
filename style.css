@@ -700,6 +700,45 @@ a:hover {
   font-weight: 600;
 }
 
+/* ─── Brainstorm v2: staged pitch cards ─────────────────── */
+
+.pitch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.25rem; }
+.pitch-card { padding: 1.25rem; border: 1px solid var(--rule); border-radius: 6px; transition: border-color 0.15s; }
+.pitch-card:hover { border-color: var(--accent); }
+.pitch-card.pitch-ready { border-left: 3px solid var(--accent); }
+.pitch-card.pitch-developing { border-left: 3px solid var(--gold, #c9a227); }
+.pitch-card.pitch-dormant { opacity: 0.5; }
+
+.pitch-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.pitch-stage-badge { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 3px; font-weight: 700; }
+.stage-ready { background: var(--accent); color: #fff; }
+.stage-developing { background: var(--gold, #c9a227); color: #fff; }
+.stage-seed { background: var(--rule); color: var(--ink-muted); }
+.stage-dormant { background: #eee; color: #999; }
+.pitch-meta-info { font-size: 0.7rem; color: var(--ink-muted); }
+
+.pitch-topic { font-size: 1.05rem; font-weight: 500; line-height: 1.35; margin: 0 0 0.5rem; }
+.pitch-tags { font-family: var(--sans); font-size: 0.7rem; color: var(--ink-muted); margin: 0 0 0.75rem; }
+
+.pitch-detail { margin-top: 0.75rem; border-top: 1px solid var(--rule); padding-top: 0.75rem; }
+.pitch-detail summary { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-muted); cursor: pointer; }
+.pitch-detail summary:hover { color: var(--accent); }
+.pitch-detail .prose { font-size: 0.85rem; line-height: 1.5; color: #555; margin-top: 0.5rem; }
+
+.pitch-vote { display: inline-flex; gap: 0.5rem; margin-top: 0.5rem; }
+.pitch-vote button { font-size: 1.1rem; background: none; border: 1px solid var(--rule); border-radius: 4px; padding: 0.2rem 0.6rem; cursor: pointer; transition: all 0.15s; }
+.pitch-vote button:hover { border-color: var(--accent); background: rgba(180,83,44,0.05); }
+.pitch-vote button.voted { border-color: var(--accent); background: var(--accent); color: #fff; }
+
+.stage-section-header { font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+.stage-section-header .count { font-weight: 400; }
+
+/* Pitch lineage on production pages */
+.pitch-lineage { font-size: 0.85rem; }
+.pitch-lineage .block-desc { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-muted); margin: 0.25rem 0 0.5rem; }
+.pitch-hist-section { padding: 0.5rem 0; border-bottom: 1px solid var(--rule); font-size: 0.8rem; line-height: 1.5; }
+.pitch-hist-section:last-child { border-bottom: 0; }
+
 .knob-note {
   margin: 0.5rem 0 0;
   font-size: 0.8rem;
