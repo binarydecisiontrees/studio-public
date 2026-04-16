@@ -57,6 +57,30 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--s
 .pub-footer { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; border-top: 1px solid var(--rule); }
 .pub-footer p { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-muted); line-height: 1.6; margin: 0; }
 
+/* Prompt — subtle expandable under title */
+.pub-prompt { margin: 0.5rem 0 1rem; }
+.pub-prompt summary {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted, #999);
+  cursor: pointer;
+  user-select: none;
+}
+.pub-prompt summary:hover { color: var(--accent, #b4532c); }
+.pub-prompt-text {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--ink-muted, #777);
+  margin: 0.5rem 0 0;
+  padding: 0.75rem 1rem;
+  background: rgba(0,0,0,0.02);
+  border-left: 2px solid var(--rule, #e0ded8);
+  border-radius: 0 4px 4px 0;
+}
+
 /* Translation links injected from sidebar into body */
 .pub-translations { font-family: var(--sans); font-size: 0.8rem; margin: 0.75rem 0 1.5rem; }
 .pub-translations a { color: var(--ink-muted); text-decoration: none; margin-right: 1rem; }
