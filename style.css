@@ -810,6 +810,39 @@ a:hover {
   color: #555;
 }
 
+/* Pitch detail page */
+.pitch-detail-angle { font-size: 1.05rem; line-height: 1.6; color: #444; margin: 1rem 0; max-width: 640px; }
+.pitch-detail-constraint { font-family: var(--sans); font-size: 0.85rem; color: var(--ink-muted); margin: 0.5rem 0; padding: 0.5rem 0.75rem; background: rgba(0,0,0,0.02); border-left: 2px solid var(--rule); }
+.pitch-detail-constraint .label,
+.pitch-detail-resist .label { font-weight: 600; margin-right: 0.25rem; }
+.pitch-detail-resist { font-family: var(--sans); font-size: 0.85rem; color: var(--ink-muted); margin: 0.5rem 0 1rem; }
+.pitch-detail-tags { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-muted); margin: 0.75rem 0; }
+.pitch-detail-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.25rem 0; }
+.pitch-detail-act { font-family: var(--sans); font-size: 0.8rem; padding: 0.4rem 0.9rem; border: 1px solid var(--rule); border-radius: 4px; background: none; cursor: pointer; color: var(--ink-muted); transition: all 0.15s; }
+.pitch-detail-act:hover { color: var(--accent); border-color: var(--accent); }
+.pitch-develop { color: var(--accent); border-color: var(--accent); }
+.pitch-develop:hover { background: var(--accent); color: #fff; }
+.pitch-produce { color: var(--accent); border-color: var(--accent); }
+.pitch-produce:hover { background: var(--accent); color: #fff; }
+.pitch-kill:hover { color: #c0392b; border-color: #c0392b; }
+.pitch-detail-section { margin: 2rem 0; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+.pitch-detail-section h2 { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin: 0 0 1rem; }
+.pitch-history-pass { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.pitch-history-pass:last-child { border-bottom: 0; }
+.pitch-history-pass h3 { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-muted); margin: 0 0 0.5rem; }
+.pitch-edit-textarea { width: 100%; min-height: 200px; font-family: var(--mono, monospace); font-size: 0.8rem; padding: 0.75rem; border: 1px solid var(--rule); border-radius: 4px; resize: vertical; }
+.pitch-edit-actions { margin-top: 0.5rem; display: flex; gap: 0.5rem; align-items: center; }
+.pitch-save-status { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-muted); }
+.conn-list { list-style: none; padding: 0; }
+.conn-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
+.conn-list li:last-child { border-bottom: 0; }
+.conn-list a { text-decoration: none; color: var(--ink); }
+.conn-list a:hover { color: var(--accent); }
+.type-badge { font-family: var(--sans); font-size: 0.65rem; text-transform: uppercase; color: var(--gold, #c9a227); margin-right: 0.35rem; font-weight: 600; }
+.conn-reason { font-size: 0.75rem; color: var(--ink-muted); margin: 0.15rem 0 0; }
+.pitch-bookmarked { color: var(--accent); font-size: 1.1em; }
+.pitch-entry.bookmarked { border-left-color: var(--accent); }
+
 /* Pitch lineage on production pages */
 .pitch-lineage { font-size: 0.85rem; }
 .pitch-lineage .block-desc { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-muted); margin: 0.25rem 0 0.5rem; }
